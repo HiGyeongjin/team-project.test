@@ -1,10 +1,21 @@
-var mysql = require('mysql2');
+
+import aws from 'aws-sdk'
+
+var mysql = require("mysql2");
 const db = mysql.createPool({
-    host : '127.0.0.1',
-    user : 'root',
-    password : 'ZAQ!xsw2',
-    database : 'ict_team',
-    port : 3306
+  host: "database-1.crsko3wmlgbz.ap-northeast-2.rds.amazonaws.com",
+  user: "gyeongjin",
+  password: "00",
+  database: "ICT_TEAM",
+  port: 3306,
 });
+
+AWS.config.update({
+  region: "ap-northeast-2",
+  accessKeyId: process.env.AWS_ ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+});
+
+const s3 = new AWS.S3()
 
 module.exports = db;
