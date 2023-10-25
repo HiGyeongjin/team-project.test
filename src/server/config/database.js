@@ -3,7 +3,7 @@ import aws from 'aws-sdk'
 
 var mysql = require("mysql2");
 const db = mysql.createPool({
-  host: "database-1.crsko3wmlgbz.ap-northeast-2.rds.amazonaws.comzz",
+  host: "127.00z",
   user: "gyeongjin",
   password: "00",
   database: "ICT_TEAM",
